@@ -1,8 +1,7 @@
-
 bash
 Brasilia é um lugar lindo
 Carreira
-Eu moro em Brasil
+Eu moro no Brasil
 Hard Skill
 Internet
 Javascript
