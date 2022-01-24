@@ -1,6 +1,5 @@
 Eu moro no Brasil
 Brasilia é um lugar lindo
-Mete a bronca
 
 Unix
 bash
