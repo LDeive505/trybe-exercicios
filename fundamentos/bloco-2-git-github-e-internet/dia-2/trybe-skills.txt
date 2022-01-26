@@ -4,7 +4,8 @@ O que eu vou aprender na Trybe:
 - Bash
 - Git
 - HTML
-- CSS- Javascript
+- CSS
+- Javascript
 - React
 - Estudo De Carreira
 - Soft Skills
