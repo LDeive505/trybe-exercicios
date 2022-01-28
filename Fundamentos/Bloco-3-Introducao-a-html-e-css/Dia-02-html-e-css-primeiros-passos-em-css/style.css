@@ -1,0 +1,32 @@
+body{
+    font-size: 16px;
+}
+h1{
+    font-size: 65px;
+    color: orange;
+    font-family: sans-serif ;
+    text-decoration:overline;
+}
+
+ul{
+    background-color: aquamarine;
+    line-height: 6mm;
+    text-align:center;
+
+}
+.change{
+   background-color: darkturquoise  ;
+}
+p{
+font-weight: 600;
+font-size: 3em;
+}
+#y{
+   color: yellow;
+}
+#r{
+   color: red;
+}
+#b{
+   color: brown; 
+}
