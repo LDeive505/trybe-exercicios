@@ -1,0 +1,7 @@
+funções pra usar em arrays:
+
+push(): adiciona um novo item no final do array.
+unshift(): adiciona um novo item no início do array.
+.pop(): nos permite remover o último item do array.
+shift(): remove o primeiro item do array;
+indexOf(): usado para procurar o índice de um item no array;
