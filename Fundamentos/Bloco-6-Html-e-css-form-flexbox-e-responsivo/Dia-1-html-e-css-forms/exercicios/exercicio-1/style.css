@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+h1{
+    text-align: center;
+}
+
+#form {
+    border: solid 3px black;
+    padding: 50px;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+
+#form-row {
+    width: 90%;
+    margin-top: 10px;
+}
+
+#name {
+    margin: 3px;
+}
+
+#email {
+    margin: 5px;
+}
+
+#my-text {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#trip-date {
+    display: block;
+    margin-bottom: 20px ;
+}
+
+form button {
+    margin-top: 20px;
+    width: 70px;
+    height: 30px;
+}
+
+
