@@ -65,3 +65,28 @@ body {
   .card:nth-of-type(3) {
     background-color: #41197f;
   }
+
+  @media screen and (min-width: 500px) {
+    #first {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+    #second {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 650px) and (max-width: 950px) {
+    #third {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    #its-magic p {
+      color: black;
+    }
+  }
+
