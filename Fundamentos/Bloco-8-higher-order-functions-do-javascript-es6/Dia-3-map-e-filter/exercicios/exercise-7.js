@@ -63,9 +63,8 @@ const books = [
 
 function characterCounter(name,character) {
   let quant = 0;
-  if(name) {
-    name.split('').map((c) => c === character ? quant +=1 : '');
-  }
+  name.split('').map((c) => c === character ? quant +=1 : '');
+  
   return quant;
 }
 
