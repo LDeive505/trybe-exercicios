@@ -24,7 +24,16 @@ const conteudos = [
 ];
 
 class Content extends React.Component{
-   
+   render(){
+     return (<ol>
+              {conteudos.map((item, i) => 
+              <ol key={i}>
+                <p>O conteúdo é: {item.conteudo}</p>
+                <p>Status: {item.status}</p>
+                <p>Bloco: {item.bloco}</p>  
+              </ol>)}
+            </ol>)
+  }
 }
 
 export default Content;
