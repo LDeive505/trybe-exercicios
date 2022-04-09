@@ -1,0 +1,44 @@
+body{
+  background-image: url('https://images7.alphacoders.com/481/481909.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.App h1{
+  color: black;
+  font-size: 100px;
+}
+.App {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  color: yellow;
+}
+
+.pokedex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black
+
+}
+
+.poke-container {
+  background-color: #FDCB05;
+  align-self: center;
+  border-radius: 20px;
+  border:solid #3B5CA8 15px;
+  font-size: x-large;
+  height: 500px;
+  margin: 1%;
+  padding: 10px;
+  width: 350px;
+}
+
+img {
+  height: 60%;
+  object-fit: contain;
+ }
