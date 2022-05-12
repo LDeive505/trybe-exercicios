@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/redux@latest/dist/redux.min.js"></script>
+    <style>
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button {
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <p><span id="new-colors">Generated Colors: NOTHING</span></p>
+      <p>Color: <span id="value">white</span></p>
+      <button id="previous">Previous color</button>
+      <button id="next">Next color</button>
+      <button id="random">Random color</button>
+    </div>
+    <script>
+      const nextButton = document.querySelector('#next');
+      const previousButton = document.querySelector('#previous');
+      const randomButton = document.querySelector('#random');
+      const container = document.querySelector('#container');
+      const colorText = document.querySelector('#value');
+      const newColors = document.querySelector('#new-colors');
+
+      const NEXT_COLOR = 'NEXT_COLOR'; const PREVIOUS_COLOR = 'PREVIOUS_COLOR'; const RANDOM_COLOR = 'RANDOM_COLOR';
+      const INITIAL_STATE = {
+        colors: ['white', 'black', 'red', 'green', 'blue', 'yellow'],
+        index: 0,
+      };
+
+      // Função que gera cores aleatórias
+      function createColor() {
+        const oneChar = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
+        let cor = '#';
+        const aleatorio = () => Math.floor(Math.random() * oneChar.length);
+        for (let i = 0; i < 6; i += 1) {
+          cor += oneChar[aleatorio()];
+      }
+      return cor;
+      }
+
+      const reducer = (prevState = INITIAL_STATE,{ type }) =>{
+        const { colors, index } = prevState;
+        const maxLength = colors.length - 1;
+        switch(type){
+          
+          case NEXT_COLOR: 
+            if(index === maxLength) return { ...prevState, index: 0 }
+            else return { ...prevState, index: index + 1 }
+  
+          case PREVIOUS_COLOR:
+            if(index === 0) return { ...prevState, index: maxLength }
+            else return { ...prevState, index: index - 1 }
+
+          case RANDOM_COLOR:
+              return { 
+                      colors: [...prevState.colors, createColor()],
+                      index: colors.length
+                    }
+          default: return INITIAL_STATE;
+        }
+      };
+      const store = Redux.createStore(reducer);
+
+      store.subscribe(() =>{
+        const { colors, index } = store.getState();
+        const newColor = colors[index];
+        const randomGeneratedColors = colors.filter((color, index) => index > 5);
+        colorText.innerHTML = newColor;
+        container.style.backgroundColor = newColor;
+        newColors.innerHTML = randomGeneratedColors; // comente para que parem de aparecer o hexadecimal das novas cores geradas
+      });
+
+      nextButton.addEventListener('click', () => store.dispatch({ type: NEXT_COLOR}));
+      previousButton.addEventListener('click', () => store.dispatch({ type: PREVIOUS_COLOR}));
+      randomButton.addEventListener('click', () => store.dispatch({ type: RANDOM_COLOR }));
+
+    </script>
+  </body>
+</html>
