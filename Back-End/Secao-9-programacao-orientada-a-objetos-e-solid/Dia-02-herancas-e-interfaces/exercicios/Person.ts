@@ -1,5 +1,3 @@
-// ./Person.ts
-
 export default class Person {
   constructor(private _name: string, private _birthDate: Date) {}
 
