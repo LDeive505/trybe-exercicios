@@ -1,0 +1,31 @@
+use("aula_29_2");
+
+// exercise 2
+// db.superheroes.find({ "aspects.height": { $lt: 180}}).pretty();
+
+// exercise 3
+// db.superheroes.find({ "aspects.height": { $lt: 180}}).count();
+
+// exercise 4
+// db.superheroes.findOne({ "aspects.height": { $gt: 200}});
+
+// exercise 7
+// db.superheroes.find({ "aspects.eyeColor": "green"});
+
+// exercise 10
+// db.superheroes.find({ "aspects.hairColor": { $in: ["Black", "No Hair"]}});
+
+// exercise 12
+// db.superheroes.find({ "aspects.height": { $not: { $gt: 180} }});
+
+//exercise 14 
+// db.superheroes.find({ "aspects.height": { $in: [180, 200] }, publisher: "Marvel Comics" });
+
+//exercise 19
+// db.superheroes.find({ publisher: "George Lucas" });
+// db.superheroes.deleteMany({ publisher: "George Lucas" });
+
+
+
+
+
